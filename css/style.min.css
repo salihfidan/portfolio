@@ -1,0 +1,34 @@
+:root {
+  --color-lightest: #fff;
+  --color-lighter: #f0f0f0;
+  --color-light: #e5e5e5;
+  --color-darkest: #666666;
+  --color-darker: #999;
+  --color-dark: #ccc;
+  --color-primary: #4662D2;
+  --color-primary-light: #E1ECF6;
+  --default-font-size: 16px;
+  --default-font-color: var(--color-darkest); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: var(--color-lighter); }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--default-font-size);
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--default-font-color); }
