@@ -2,7 +2,7 @@
   --color-lightest: #fff;
   --color-lighter: #f0f0f0;
   --color-light: #e5e5e5;
-  --color-darkest: #666666;
+  --color-darkest: #666;
   --color-darker: #999;
   --color-dark: #ccc;
   --color-primary: #4662D2;
@@ -32,3 +32,40 @@ body {
   font-weight: 600;
   line-height: 1.7;
   color: var(--default-font-color); }
+
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 2rem; }
+
+.font-color-primary {
+  color: var(--color-primary); }
+
+.page {
+  padding: 2rem; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 4rem); }
+  .header__sub {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 1px; }
+  .header__contact-list {
+    list-style: none;
+    margin-top: 5rem; }
+  .header__contact-list-item {
+    display: inline;
+    padding: .75rem; }
+  .header__contact-link, .header__contact-link:link, .header__contact-link:visited {
+    text-decoration: none;
+    color: var(--color-darker); }
+  .header__contact-link:hover, .header__contact-link:active {
+    color: var(--color-darkest); }
+  .header__contact-icon {
+    width: 2.25rem;
+    fill: currentColor; }

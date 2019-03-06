@@ -1,0 +1,45 @@
+.page {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  height: calc(100vh - 4rem);
+
+  &__sub {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+  }
+
+  &__contact-list {
+    list-style: none;
+    margin-top: 5rem;
+  }
+
+  &__contact-list-item {
+    display: inline;
+    padding: .75rem;
+  }
+
+  &__contact-link,
+  &__contact-link:link,
+  &__contact-link:visited {
+    text-decoration: none;
+    color: var(--color-darker);
+  }
+
+  &__contact-link:hover,
+  &__contact-link:active {
+    color: var(--color-darkest);
+  }
+
+  &__contact-icon {
+    width: 2.25rem;
+    fill: currentColor;
+  }
+}

@@ -12,7 +12,7 @@
   --color-lighter: #f0f0f0;
   --color-light: #e5e5e5;
 
-  --color-darkest: #666666;
+  --color-darkest: #666;
   --color-darker: #999;
   --color-dark: #ccc;
 
@@ -36,7 +36,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
 }
 
 body {
@@ -55,6 +55,17 @@ body {
   color: var(--default-font-color);
 }
 
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
 /////////////////////////////////////////////
 // Utilities
 ////////////////////////////////////////////
+
+.font-color-primary {
+  color: var(--color-primary);
+}
