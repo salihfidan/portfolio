@@ -127,7 +127,7 @@ body {
   color: var(--color-primary); }
 
 .btn-primary:active {
-  box-shadow: none; }
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.35); }
 
 .btn-icon {
   height: 1.4rem;
