@@ -157,12 +157,6 @@ body {
       width: 25%;
       margin-left: 4%;
       margin-right: 4%; } }
-  @media (min-width: 1200px) {
-    .card:nth-child(3n), .card:last-child {
-      margin-right: 0; } }
-  @media (min-width: 1200px) {
-    .card:nth-child(4n), .card:first-child {
-      margin-left: 0; } }
   .card__header-text {
     font-size: 1.2rem;
     color: var(--color-dark); }
