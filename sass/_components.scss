@@ -49,20 +49,28 @@
   }
 
   &:nth-child(2n) {
-    @media (min-width: 768px) and (max-width: 1439.9px) {
+    @media (min-width: 768px) and (max-width: 1199.9px) {
       margin-right: 0;
     }
   }
 
-  @media (min-width: 1440px) {
-    width: 26%;
-    margin-right: 7%;
+  @media (min-width: 1200px) {
+    width: 27%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 
-  &:nth-child(3n)
+  &:nth-child(3n),
   &:last-child {
-    @media (min-width: 1440px) {
+    @media (min-width: 1200px) {
       margin-right: 0;
+    }
+  }
+
+  &:nth-child(4n),
+  &:first-child {
+    @media (min-width: 1200px) {
+      margin-left: 0;
     }
   }
 
