@@ -13,7 +13,7 @@
   border-radius: 1rem;
   box-shadow: 0 .3rem .4rem rgba(0, 0, 0, .15);
 
-  transition: all .2s cubic-bezier(1,0,0,1);
+  transition: all .2s cubic-bezier(1, 0, 0, 1);
 }
 
 .btn-primary:hover {
@@ -33,13 +33,12 @@
 .card {
   background-color: var(--color-lightest);
   padding: 2rem;
+  margin-bottom: 3rem;
   border: var(--default-border);
   border-radius: 1rem;
   box-shadow: 0 .3rem .4rem rgba(0, 0, 0, .15);
 
-  &__header {
-
-  }
+  &__header {}
 
   &__header-text {
     font-size: 1.2rem;
@@ -55,20 +54,16 @@
     box-shadow: 0 3.5rem 4rem -3.5rem rgba(0, 0, 0, .45);
   }
 
-  // &__text {
-
-  // }
-
   &__tags {
     font-size: 1.2rem;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   &__tag {
     display: inline-block;
-    padding: .5rem 1.25rem;
-    margin: 0 .25rem;
+    padding: .5rem 1.5rem;
+    margin: 1rem .25rem 0 .25rem;
     background-color: var(--color-primary-light);
     border-radius: 10rem;
   }
