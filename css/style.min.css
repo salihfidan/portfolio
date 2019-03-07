@@ -7,8 +7,9 @@
   --color-dark: #ccc;
   --color-primary: #4662D2;
   --color-primary-light: #E1ECF6;
-  --default-font-size: 16px;
-  --default-font-color: var(--color-darkest); }
+  --default-font-size: 1.6rem;
+  --default-font-color: var(--color-darkest);
+  --default-border: 1px solid #fafafa; }
 
 * {
   margin: 0;
@@ -38,6 +39,19 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 2rem; }
+
+.heading-secondary {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem; }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-primary); }
 
 .font-color-primary {
   color: var(--color-primary); }
@@ -70,3 +84,65 @@ body {
   .header__contact-icon {
     width: 2.25rem;
     fill: currentColor; }
+
+.portfolio {
+  padding: 5rem 2rem; }
+  .portfolio__header {
+    text-align: center;
+    margin-bottom: 5rem; }
+
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-darkest);
+  padding: .75rem 2rem;
+  border: var(--default-border);
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s cubic-bezier(1, 0, 0, 1); }
+
+.btn-primary:hover {
+  color: var(--color-primary); }
+
+.btn-primary:active {
+  box-shadow: none; }
+
+.btn-icon {
+  height: 1.4rem;
+  margin-right: 1rem;
+  fill: currentColor; }
+
+.card {
+  background-color: var(--color-lightest);
+  padding: 2rem;
+  border: var(--default-border);
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.15); }
+  .card__header-text {
+    font-size: 1.2rem;
+    color: var(--color-dark); }
+  .card__img {
+    display: block;
+    width: calc(100% + 8rem);
+    margin-top: 1rem;
+    margin-left: -4rem;
+    border-radius: .3rem;
+    box-shadow: 0 3.5rem 4rem -3.5rem rgba(0, 0, 0, 0.45); }
+  .card__tags {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 3rem; }
+  .card__tag {
+    display: inline-block;
+    padding: .5rem 1.25rem;
+    margin: 0 .25rem;
+    background-color: var(--color-primary-light);
+    border-radius: 10rem; }
+  .card__footer {
+    padding: 2rem 0 1rem 0;
+    text-align: center; }
