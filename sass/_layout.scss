@@ -7,7 +7,7 @@
   height: 100vh;
   padding: 0 2rem;
 
-  @media (min-width: 425px){
+  @media (min-width: 425px) {
     padding: 0;
   }
 
@@ -46,6 +46,9 @@
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 5rem 2rem;
 
   &__header {
@@ -53,10 +56,23 @@
     margin-bottom: 10rem;
   }
 
-  &__header-text {
-  }
+  &__header-text {}
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    @media (min-width: 768px) {
+      max-width: 72rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: unset;
+      justify-content: center;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 114rem;
+    }
   }
 }
