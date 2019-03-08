@@ -63,11 +63,9 @@ body {
   align-items: center;
   text-align: center;
   height: 100vh;
-  margin-top: 3rem;
   padding: 0 2rem; }
   @media (min-width: 425px) {
     .header {
-      margin: 0;
       padding: 0; } }
   .header__sub {
     font-size: 2rem;
