@@ -186,7 +186,12 @@
   </footer>
 
   <script>
+    function isFacebookApp() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+    }
     document.addEventListener("DOMContentLoaded", function () {
+      console.log(isFacebookApp());
 
       var scrollLinks = document.querySelectorAll('[href^="#"]');
       for (i = 0; i < scrollLinks.length; i++) {
