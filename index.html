@@ -186,18 +186,10 @@
   </footer>
 
   <script>
-    function isFacebookApp() {
-      var ua = navigator.userAgent || navigator.vendor || window.opera;
-      return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
-    }
     document.addEventListener("DOMContentLoaded", function () {
 
-      if(isFacebookApp()) {
-        document.body.style.background = "#f3f3f3";
-      }
-
       var scrollLinks = document.querySelectorAll('[href^="#"]');
-      for (i = 0; i < scrollLinks.length; i++) {
+      for (var i = 0; i < scrollLinks.length; i++) {
         scrollLinks[i].addEventListener('click', scrollHandler);
       }
 
