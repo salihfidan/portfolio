@@ -186,15 +186,22 @@
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    function ready(callbackFunction) {
+      if (document.readyState != 'loading') {
+        callbackFunction(event);
+      } else {
+        document.addEventListener("DOMContentLoaded", callbackFunction);
+      }
+    }
 
+    ready(function (event) {
       var scrollLinks = document.querySelectorAll('[href^="#"]');
       for (var i = 0; i < scrollLinks.length; i++) {
         scrollLinks[i].addEventListener('click', scrollHandler);
       }
 
-      function scrollHandler(event) {
-        event.preventDefault();
+      function scrollHandler(e) {
+        e.preventDefault();
 
         var currentPosition = document.documentElement.scrollTop;
 
@@ -203,7 +210,7 @@
 
         var distance = goToPosition - currentPosition;
 
-        var totalStep = 40;
+        var totalStep = 20;
         var currentStep = 0;
         var intervalTime = 10;
 
@@ -219,7 +226,6 @@
         }, intervalTime);
 
       }
-
     });
   </script>
 
