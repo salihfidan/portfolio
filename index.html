@@ -205,12 +205,8 @@
 
         var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-        document.body.scrollTop = 1;
-        var inApp = false;
-        if (document.body.scrollTop == 1) {
-          document.body.scrollTop = 0;
-          inApp = true;
-        }
+        var isInAppBrowser = document.scrollingElement && document.scrollingElement.tagName == 'BODY' ? true :
+          false;
 
         var targetElementId = this.getAttribute('href').split('#')[1];
         var goToPosition = document.getElementById(targetElementId).offsetTop;
@@ -225,7 +221,7 @@
 
         var interval = setInterval(function () {
           if (currentStep < totalStep) {
-            if (inApp) {
+            if (isInAppBrowser) {
               document.body.scrollTop += scrollby;
             } else {
               document.documentElement.scrollTop += scrollby;
