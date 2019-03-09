@@ -191,7 +191,10 @@
       return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
     }
     document.addEventListener("DOMContentLoaded", function () {
-      console.log(isFacebookApp());
+
+      if(isFacebookApp()) {
+        document.body.style.background = "#f3f3f3";
+      }
 
       var scrollLinks = document.querySelectorAll('[href^="#"]');
       for (i = 0; i < scrollLinks.length; i++) {
