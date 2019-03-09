@@ -203,7 +203,14 @@
       function scrollHandler(e) {
         e.preventDefault();
 
-        var currentPosition = document.documentElement.scrollTop;
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        document.body.scrollTop = 1;
+        var inApp = false;
+        if (document.body.scrollTop == 1) {
+          document.body.scrollTop = 0;
+          inApp = true;
+        }
 
         var targetElementId = this.getAttribute('href').split('#')[1];
         var goToPosition = document.getElementById(targetElementId).offsetTop;
@@ -218,7 +225,11 @@
 
         var interval = setInterval(function () {
           if (currentStep < totalStep) {
-            document.documentElement.scrollTop += scrollby;
+            if (inApp) {
+              document.body.scrollTop += scrollby;
+            } else {
+              document.documentElement.scrollTop += scrollby;
+            }
             currentStep++;
           } else {
             clearInterval(interval);
