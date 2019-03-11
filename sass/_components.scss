@@ -59,6 +59,7 @@
 // Cards for portfolio works 
 
 .card {
+  position: relative;
   background-color: var(--color-lightest);
   padding: 1.5rem;
   margin-bottom: 3rem;
@@ -107,11 +108,13 @@
   &__heading {}
 
   &__work-type {
+    position: absolute;
     display: inline-block;
-    position: relative;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
+    top: -1px;
+    right: -1px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0 1rem 0 2rem;
     cursor: pointer;
 
     &--client {
@@ -125,7 +128,7 @@
     &::after {
       display: inline-block;
       position: absolute;
-      top: -.75rem;
+      top: 1.25rem;
       right: 1.5rem;
       padding: .25rem 1.5rem;
       text-align: center;
