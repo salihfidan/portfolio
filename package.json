@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Public repository for my portfolio",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.min.css && node-sass sass/main.scss css/style.min.css -w",
     "devserver": "live-server",
