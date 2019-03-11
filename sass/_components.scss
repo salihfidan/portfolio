@@ -92,16 +92,10 @@
 
   &__header-text {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     color: var(--color-dark);
-
-    @media (min-width: 1024px) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
   }
 
   &__heading {}
@@ -111,24 +105,25 @@
     position: relative;
     width: 1rem;
     height: 1rem;
-    margin-right: .5rem;
-    background-color: var(--color-orange);
     border-radius: 50%;
     cursor: pointer;
 
-    @media (min-width: 1024px) {
-      margin-right: 0;
+    &--client {
+      background-color: var(--color-orange);
+    }
+
+    &--personal {
+      background-color: var(--color-green);
     }
 
     &::after {
       display: inline-block;
-      position: relative;
+      position: absolute;
       top: -.75rem;
-      left: 1.5rem;
+      right: 1.5rem;
       padding: .25rem 1.5rem;
       text-align: center;
-      background-color: var(--color-orange);
-      color: var(--color-lightest);
+      color: var(--color-darkest);
       border-radius: 10rem;
       transition: all .2s cubic-bezier(1, 0, 0, 1);
       opacity: 0;
@@ -142,6 +137,12 @@
 
     &--client::after {
       content: "client\00a0work";
+      background-color: var(--color-orange);
+    }
+
+    &--personal::after {
+      content: "personal\00a0project";
+      background-color: var(--color-green);
     }
   }
 
