@@ -144,6 +144,9 @@ body {
     background-color: var(--color-orange);
     border-radius: 50%;
     cursor: pointer; }
+    @media (min-width: 1024px) {
+      .card__work-type {
+        margin-right: 0; } }
     .card__work-type::after {
       display: inline-block;
       position: relative;
