@@ -189,8 +189,14 @@
     function ready(callbackFunction) {
       if (document.readyState != 'loading') {
         callbackFunction(event);
-      } else {
+      } else if (document.addEventListener) {
         document.addEventListener("DOMContentLoaded", callbackFunction);
+      } else {
+        document.attachEvent('onreadystatechange', function () {
+          if (document.readyState == 'complete') {
+            callbackFunction(event);
+          };
+        });
       }
     }
 
@@ -199,41 +205,37 @@
       for (var i = 0; i < scrollLinks.length; i++) {
         scrollLinks[i].addEventListener('click', scrollHandler);
       }
-
-      function scrollHandler(e) {
-        e.preventDefault();
-
-        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-        var isInAppBrowser = document.scrollingElement && document.scrollingElement.tagName == 'BODY' ? true :
-          false;
-
-        var targetElementId = this.getAttribute('href').split('#')[1];
-        var goToPosition = document.getElementById(targetElementId).offsetTop;
-
-        var distance = goToPosition - currentPosition;
-
-        var totalStep = 20;
-        var currentStep = 0;
-        var intervalTime = 10;
-
-        var scrollby = distance / totalStep;
-
-        var interval = setInterval(function () {
-          if (currentStep < totalStep) {
-            if (isInAppBrowser) {
-              document.body.scrollTop += scrollby;
-            } else {
-              document.documentElement.scrollTop += scrollby;
-            }
-            currentStep++;
-          } else {
-            clearInterval(interval);
-          }
-        }, intervalTime);
-
-      }
     });
+
+    function scrollHandler(e) {
+      e.preventDefault();
+
+      var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+      var targetElementId = this.getAttribute('href').split('#')[1];
+      var goToPosition = document.getElementById(targetElementId).offsetTop;
+
+      var distance = goToPosition - currentPosition;
+
+      var totalStep = 20;
+      var currentStep = 0;
+      var intervalTime = 10;
+
+      var scrollby = distance / totalStep;
+
+      var isScrollElementBody = document.scrollingElement && document.scrollingElement.tagName == 'BODY';
+
+      var interval = setInterval(function () {
+        if (currentStep < totalStep) {
+          isScrollElementBody ? document.body.scrollTop += scrollby : document.documentElement.scrollTop +=
+            scrollby;
+          currentStep++;
+        } else {
+          clearInterval(interval);
+        }
+      }, intervalTime);
+
+    }
   </script>
 
 </body>
