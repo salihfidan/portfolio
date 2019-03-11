@@ -8,6 +8,9 @@
   --color-primary: #4662D2;
   --color-primary-light: #E1ECF6;
   --color-orange: #ffc164;
+  --color-orange-text: #ffdaa4;
+  --color-green: #5fc95f;
+  --color-green-text: #b6d8b6;
   --default-font-size: 1.6rem;
   --default-font-color: var(--color-darkest);
   --default-border: 1px solid #fafafa; }
@@ -219,6 +222,10 @@ body {
   .portfolio__header {
     text-align: center;
     margin-bottom: 10rem; }
+  .portfolio__client-text {
+    border-bottom: 0.5rem solid var(--color-orange-text); }
+  .portfolio__personal-text {
+    border-bottom: 0.5rem solid var(--color-green-text); }
   .portfolio__list {
     display: flex;
     flex-direction: column;

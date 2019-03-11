@@ -50,6 +50,15 @@
 
   &__header-text {}
 
+
+  &__client-text {
+    border-bottom: .5rem solid var(--color-orange-text);
+  }
+
+  &__personal-text {
+    border-bottom: .5rem solid var(--color-green-text);
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
