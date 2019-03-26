@@ -7,27 +7,6 @@
 // Base
 ////////////////////////////////////////////
 
-:root {
-  --color-lightest: #fff;
-  --color-lighter: #f0f0f0;
-  --color-light: #e5e5e5;
-
-  --color-darkest: #666;
-  --color-darker: #999;
-  --color-dark: #ccc;
-
-  // alternative green #46d27c, #dbf7e6
-  --color-primary: #4662D2;
-  --color-primary-light: #E1ECF6;
-
-  --color-orange: #ffdaa4;
-  --color-green: #b6d8b6;
-
-  --default-font-size: 1.6rem;
-  --default-font-color: var(--color-darkest);
-  --default-border: 1px solid #fafafa;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +24,7 @@ html {
 }
 
 body {
-  background-color: var(--color-lighter);
+  background-color: $color-lighter;
 }
 
 /////////////////////////////////////////////
@@ -54,10 +33,10 @@ body {
 
 body {
   font-family: 'Nunito', sans-serif;
-  font-size: var(--default-font-size);
+  font-size: $default-font-size;
   font-weight: 600;
   line-height: 1.7;
-  color: var(--default-font-color);
+  color: $default-font-color;
 }
 
 .heading-primary {
@@ -79,7 +58,7 @@ body {
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--color-primary);
+  color: $color-primary;
 }
 
 /////////////////////////////////////////////
@@ -87,5 +66,5 @@ body {
 ////////////////////////////////////////////
 
 .font-color-primary {
-  color: var(--color-primary);
+  color: $color-primary;
 }

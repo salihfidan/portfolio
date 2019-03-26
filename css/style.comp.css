@@ -1,18 +1,3 @@
-:root {
-  --color-lightest: #fff;
-  --color-lighter: #f0f0f0;
-  --color-light: #e5e5e5;
-  --color-darkest: #666;
-  --color-darker: #999;
-  --color-dark: #ccc;
-  --color-primary: #4662D2;
-  --color-primary-light: #E1ECF6;
-  --color-orange: #ffdaa4;
-  --color-green: #b6d8b6;
-  --default-font-size: 1.6rem;
-  --default-font-color: var(--color-darkest);
-  --default-border: 1px solid #fafafa; }
-
 * {
   margin: 0;
   padding: 0; }
@@ -27,14 +12,14 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: var(--color-lighter); }
+  background-color: #f0f0f0; }
 
 body {
   font-family: 'Nunito', sans-serif;
-  font-size: var(--default-font-size);
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.7;
-  color: var(--default-font-color); }
+  color: #666; }
 
 .heading-primary {
   font-size: 4rem;
@@ -53,10 +38,10 @@ body {
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--color-primary); }
+  color: #4662D2; }
 
 .font-color-primary {
-  color: var(--color-primary); }
+  color: #4662D2; }
 
 .btn-primary,
 .btn-primary:link,
@@ -66,16 +51,16 @@ body {
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
-  color: var(--color-darkest);
-  background-color: var(--color-lightest);
+  color: #666;
+  background-color: #fff;
   padding: .5rem 1.75rem;
-  border: var(--default-border);
+  border: 1px solid #fafafa;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.15);
   transition: all 0.2s cubic-bezier(1, 0, 0, 1); }
 
 .btn-primary:hover {
-  color: var(--color-primary); }
+  color: #4662D2; }
 
 .btn-primary:active {
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.35); }
@@ -89,11 +74,11 @@ body {
 .btn-weak:link,
 .btn-weak:visited {
   text-decoration: none;
-  color: var(--color-darker); }
+  color: #999; }
 
 .btn-weak:hover,
 .btn-weak:active {
-  color: var(--color-darkest); }
+  color: #666; }
 
 .btn-inline-icon {
   height: 1.4rem;
@@ -101,10 +86,10 @@ body {
 
 .card {
   position: relative;
-  background-color: var(--color-lightest);
+  background-color: #fff;
   padding: 1.5rem;
   margin-bottom: 3rem;
-  border: var(--default-border);
+  border: 1px solid #fafafa;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.15); }
   @media (min-width: 425px) {
@@ -131,7 +116,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    color: var(--color-dark); }
+    color: #ccc; }
   .card__work-type {
     position: absolute;
     display: inline-block;
@@ -142,9 +127,9 @@ body {
     border-radius: 0 1rem 0 2rem;
     cursor: pointer; }
     .card__work-type--client {
-      background-color: var(--color-orange); }
+      background-color: #ffdaa4; }
     .card__work-type--personal {
-      background-color: var(--color-green); }
+      background-color: #b6d8b6; }
     .card__work-type::after {
       display: inline-block;
       position: absolute;
@@ -152,7 +137,7 @@ body {
       right: 1.5rem;
       padding: .25rem 1.5rem;
       text-align: center;
-      color: var(--color-darkest);
+      color: #666;
       border-radius: 10rem;
       transition: all 0.2s cubic-bezier(1, 0, 0, 1);
       opacity: 0;
@@ -162,17 +147,17 @@ body {
       visibility: visible; }
     .card__work-type--client::after {
       content: "client\00a0work";
-      background-color: var(--color-orange); }
+      background-color: #ffdaa4; }
     .card__work-type--personal::after {
       content: "personal\00a0project";
-      background-color: var(--color-green); }
+      background-color: #b6d8b6; }
   .card__img {
     display: block;
     width: calc(100% + 6rem);
     margin-top: 1rem;
     margin-left: -3rem;
     border-radius: .3rem;
-    border: 1px solid var(--color-light);
+    border: 1px solid #e5e5e5;
     box-shadow: 0 3.5rem 4rem -3.5rem rgba(0, 0, 0, 0.45); }
     @media (min-width: 425px) {
       .card__img {
@@ -185,7 +170,7 @@ body {
     display: inline-block;
     padding: .25rem 1.5rem;
     margin: 1rem .25rem 0 .25rem;
-    background-color: var(--color-primary-light);
+    background-color: #E1ECF6;
     border-radius: 10rem;
     font-size: 1.2rem; }
   .card__footer {
@@ -199,6 +184,7 @@ body {
   align-items: center;
   text-align: center;
   height: 100vh;
+  max-height: 180rem;
   padding: 0 2rem; }
   @media (min-width: 425px) {
     .header {
@@ -239,9 +225,9 @@ body {
       height: .85rem;
       z-index: -1; }
   .portfolio__client-text::after {
-    background-color: var(--color-orange); }
+    background-color: #ffdaa4; }
   .portfolio__personal-text::after {
-    background-color: var(--color-green); }
+    background-color: #b6d8b6; }
   .portfolio__list {
     display: flex;
     flex-direction: column;
