@@ -27,7 +27,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: var(--color-lighter); }
+  background-color: var(--color-lighter);
+  overflow-x: hidden; }
 
 body {
   font-family: 'Nunito', sans-serif;
@@ -213,8 +214,8 @@ body {
     list-style: none;
     margin-top: 5rem; }
   .header__contact-list-item {
-    display: inline;
-    padding: .75rem; }
+    display: inline-block;
+    margin: 1rem; }
   .header__contact-icon {
     height: 2.25rem; }
 
